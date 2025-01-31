@@ -1,11 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Browse4Pets</title>
+    <link rel="shortcut icon" href="assets/dog-cartoon.png" type="image/x-icon">
+
+    <!-- daisyUI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        .font-sora {
+            font-family: "Sora", serif;
+        }
+      </style>
+    <!-- font-awesome  -->
+    <script src="https://kit.fontawesome.com/bb06e7e05f.js" crossorigin="anonymous"></script>
+
+    <!-- tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <div class="navbar bg-base-100 px-4 md:px-8">
+
+                <div class="navbar-start">
+                    <!-- Mobile Menu -->
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a class="">Find a pet</a></li>
+                            <li><a class="">Breeds</a></li>
+                            <li><a class="">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <!-- Logo -->
+                    <a class="flex items-center gap-2">
+                        <img class="mr-[10px]" src="assets/logo-header.png" alt="Browse4Pets" class="h-8">
+                    </a>
+                    <h1 class=" font-sora">Browse <span class="text-yellow-400">4</span>Pets</h1>
+                </div>
+
+                <!-- Center - Desktop Menu -->
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class=" hover:text-orange-400">Breeds</a></li>
+                        <li><a class=" hover:text-orange-400">Find a pet</a></li>
+                        <li><a class=" hover:text-orange-400">Contact us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right Side - Icons & Buttons -->
+                <div class="navbar-end gap-6">
+                    <i class="fa-regular fa-bell  text-gray-600 cursor-pointer hover:text-yellow-600"></i>
+                    <i class="fa-solid fa-magnifying-glass text-gray-600 cursor-pointer hover:text-yellow-600"></i>
+                    <a
+                        class="btn min-h-0 h-8 bg-white text-black border border-orange-400 hidden  px-8 sm:flex hover:bg-yellow-400  ">Login</a>
+                    <a
+                        class="btn min-h-0 h-8 bg-yellow-500 text-white hover:bg-yellow-400 border-none hidden px-8 sm:flex ">Register</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
-</html>
