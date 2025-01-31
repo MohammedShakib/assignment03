@@ -7,43 +7,44 @@
     <title>Browse4Pets</title>
     <link rel="shortcut icon" href="assets/dog-cartoon.png" type="image/x-icon">
 
-    <!-- daisyUI  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Google Fonts - ADLaM Display & Sora -->
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display:wght@400;700&family=Sora:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- googlefont -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <style>
-        .font-sora {
-            font-family: "Sora", serif;
-        }
-      </style>
-    <!-- font-awesome  -->
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <!--  Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/bb06e7e05f.js" crossorigin="anonymous"></script>
 
-    <!-- tailwind  -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--  Tailwind Configuration -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        clifford: '#da373d',
-                    }
-                }
-            }
-        }
+                    fontFamily: {
+                        adlam: ['"ADLaM Display"', 'sans-serif'],
+                        sora: ['"Sora"', 'sans-serif'],
+                    },
+                },
+            },
+        };
     </script>
+
+    <!-- ✅ Custom Styles -->
+    <style>
+        body {
+            font-family: "Sora", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+    <header class="container mx-auto">
         <nav>
             <div class="navbar bg-base-100 px-4 md:px-8">
-
                 <div class="navbar-start">
                     <!-- Mobile Menu -->
                     <div class="dropdown">
@@ -56,43 +57,127 @@
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a class="">Find a pet</a></li>
-                            <li><a class="">Breeds</a></li>
-                            <li><a class="">Contact us</a></li>
+                            <li><a>Find a pet</a></li>
+                            <li><a>Breeds</a></li>
+                            <li><a>Contact us</a></li>
                         </ul>
                     </div>
                     <!-- Logo -->
                     <a class="flex items-center gap-2">
                         <img class="mr-[10px]" src="assets/logo-header.png" alt="Browse4Pets" class="h-8">
                     </a>
-                    <h1 class=" font-sora">Browse <span class="text-yellow-400">4</span>Pets</h1>
+                    <h1 class="font-sora text-xl font-bold">Browse <span class="text-yellow-400">4</span>Pets</h1>
                 </div>
 
                 <!-- Center - Desktop Menu -->
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
-                        <li><a class=" hover:text-orange-400">Breeds</a></li>
-                        <li><a class=" hover:text-orange-400">Find a pet</a></li>
-                        <li><a class=" hover:text-orange-400">Contact us</a></li>
+                        <li><a class="hover:text-orange-400">Breeds</a></li>
+                        <li><a class="hover:text-orange-400">Find a pet</a></li>
+                        <li><a class="hover:text-orange-400">Contact us</a></li>
                     </ul>
                 </div>
 
                 <!-- Right Side - Icons & Buttons -->
                 <div class="navbar-end gap-6">
-                    <i class="fa-regular fa-bell  text-gray-600 cursor-pointer hover:text-yellow-600"></i>
+                    <i class="fa-regular fa-bell text-gray-600 cursor-pointer hover:text-yellow-600"></i>
                     <i class="fa-solid fa-magnifying-glass text-gray-600 cursor-pointer hover:text-yellow-600"></i>
-                    <a
-                        class="btn min-h-0 h-8 bg-white text-black border border-orange-400 hidden  px-8 sm:flex hover:bg-yellow-400  ">Login</a>
-                    <a
-                        class="btn min-h-0 h-8 bg-yellow-500 text-white hover:bg-yellow-400 border-none hidden px-8 sm:flex ">Register</a>
+                    <a class="btn min-h-0 h-8 bg-white text-black border border-orange-400 hidden px-8 sm:flex hover:bg-yellow-400">Login</a>
+                    <a class="btn min-h-0 h-8 bg-yellow-500 text-white hover:bg-yellow-400 border-none hidden px-8 sm:flex">Register</a>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
 
+    <main class="container mx-auto">
+        <!-- Hero Section -->
+        <section class="relative container mx-auto flex flex-col lg:flex-row items-center px-6 lg:px-16 py-16 gap-8 mb-20">
+            <!-- Left: Text Content -->
+            <div class="w-full lg:w-2/5 text-center lg:text-left space-y-6 z-10">
+                <h1 class="font-adlam text-3xl md:text-5xl font-bold leading-snug">
+                    Pamper Your Pet, <br> Because They Deserve the Best
+                </h1>
+                <p class="font-sora text-gray-500 text-lg">
+                    Discover a world of treats, toys, and essentials handpicked for your furry friends. 
+                    Shop now and make tails wag with joy!
+                </p>
+                <button class="btn bg-yellow-400 text-black hover:bg-orange-500 px-6 py-3 text-lg rounded-lg shadow-md">
+                    Find a pet
+                </button>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="absolute right-0 top-10 w-full lg:w-3/5 flex justify-end">
+                <img src="assets/cat-big.png" alt="Cute Cat" 
+                    class="max-w-[800px] lg:max-w-[1000px] transform translate-x-10 translate-y-6 px-8">
+            </div>
+        </section>
+
+        <!-- Browse By Categories -->
+        <section class="py-20 px-6 lg:px-16 container mx-auto">
+            <h2 class="text-4xl text-black mb-12 uppercase font-adlam font-bold text-center">
+                Browse By Categories
+            </h2>
+        
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 w-full">
+                <!-- Dog -->
+                <div class="bg-yellow-300 p-6 rounded-xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="bg-white rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                        <img src="assets/dog-cartoon.png" alt="Dog" class="w-12 h-12">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Dog</h3>
+                    <p class="text-sm text-gray-600">3 items</p>
+                </div>
+        
+                <!-- Fish -->
+                <div class="bg-yellow-300 p-6 rounded-xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="bg-white rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                        <img src="assets/fish-cartoon.png" alt="Fish" class="w-12 h-12">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Fish</h3>
+                    <p class="text-sm text-gray-600">3 items</p>
+                </div>
+        
+                <!-- Cat -->
+                <div class="bg-yellow-300 p-6 rounded-xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="bg-white rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                        <img src="assets/cat-cartoon.png" alt="Cat" class="w-12 h-12">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Cat</h3>
+                    <p class="text-sm text-gray-600">3 items</p>
+                </div>
+        
+                <!-- Birds -->
+                <div class="bg-yellow-300 p-6 rounded-xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="bg-white rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                        <img src="assets/bird-cartoon.png" alt="Birds" class="w-12 h-12">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Birds</h3>
+                    <p class="text-sm text-gray-600">3 items</p>
+                </div>
+        
+                <!-- Small Pet -->
+                <div class="bg-yellow-300 p-6 rounded-xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="bg-white rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                        <img src="assets/mouse-cartoon.png" alt="Small Pet" class="w-12 h-12">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Small Pet</h3>
+                    <p class="text-sm text-gray-600">3 items</p>
+                </div>
+        
+                <!-- Rabbit -->
+                <div class="bg-yellow-300 p-6 rounded-xl text-center shadow-md hover:scale-105 transition-all">
+                    <div class="bg-white rounded-full p-4 w-20 h-20 mx-auto flex items-center justify-center">
+                        <img src="assets/rabbit-cartoon.png" alt="Rabbit" class="w-12 h-12">
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4">Rabbit</h3>
+                    <p class="text-sm text-gray-600">2 items</p>
+                </div>
+            </div>
+        </section>
+        
     </main>
-    <footer>
 
-    </footer>
+    <footer></footer>
 </body>
+</html>
